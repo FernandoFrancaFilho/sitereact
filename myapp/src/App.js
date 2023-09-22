@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Map from './components/Map'
+import MapComponent from './components/Map'
 function App() {
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Map></Map>
+      <MapComponent></MapComponent>
     </div>
   );
 }
