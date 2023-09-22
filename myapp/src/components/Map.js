@@ -1,5 +1,8 @@
 import React from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet'; // Import the 'L' object
+import 'leaflet/dist/leaflet.css';
+
 
 const customMarkerIcon = L.icon({
   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker.png',
@@ -12,7 +15,7 @@ const MapComponent = () => {
   const center = [51.505, -0.09]; // Replace with your desired map center coordinates
 
   return (
-    <Map center={center} zoom={13} style={{ height: '500px', width: '100%' }}>
+    <MapContainer center={center} zoom={13} style={{ height: '500px', width: '100%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -22,7 +25,7 @@ const MapComponent = () => {
           A custom marker icon!
         </Popup>
       </Marker>
-    </Map>
+    </MapContainer>
   );
 };
 
